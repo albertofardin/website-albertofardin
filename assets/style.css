@@ -104,6 +104,7 @@ h1 {
   position: relative;
   z-index: 1;
   overflow: hidden;
+  cursor: pointer;
 }
 .btn:hover {
   background: color-mix(in oklab, var(--color2) 20%, transparent);
@@ -148,4 +149,55 @@ footer {
   color: var(--muted);
   font-size: 13px;
   backdrop-filter: blur(6px);
+}
+
+.cv-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Pulsante Curriculum */
+.cv-toggle {
+  cursor: pointer;
+  border: none;
+  background: #000;
+  color: #fff;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  font: inherit;
+}
+
+/* Menu */
+.cv-menu {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  min-width: 220px;
+  background: #fff;
+  color: #333;
+  padding: 0.4rem 0;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  display: none;
+  z-index: 10;
+  border-radius: 8px;
+  border: 1px solid var(--color1);
+}
+
+.cv-menu a {
+  display: block;
+  padding: 0.5rem 0.9rem;
+  text-decoration: none;
+  color: inherit;
+  font-size: 0.95rem;
+  white-space: nowrap;
+  text-align: left;
+}
+
+.cv-menu a:hover {
+  background: color-mix(in oklab, var(--color1) 20%, transparent);
+}
+
+/* Classe che rende visibile il menu */
+.cv-menu.is-open {
+  display: block;
 }

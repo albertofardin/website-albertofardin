@@ -101,14 +101,6 @@
         <div class="row" style="margin-top: 12px">
           <a
             class="btn"
-            href="https://github.com/albertofardin"
-            target="_blank"
-            rel="noopener"
-          >
-            <span class="dot" aria-hidden="true"></span> GitHub
-          </a>
-          <a
-            class="btn"
             href="https://www.linkedin.com/in/albertofardin"
             target="_blank"
             rel="noopener"
@@ -117,12 +109,22 @@
           </a>
           <a
             class="btn"
-            href="/AlbertoFardin-CV.pdf"
+            href="https://github.com/albertofardin"
             target="_blank"
             rel="noopener"
           >
-            <span class="dot" aria-hidden="true"></span> Curriculum
+            <span class="dot" aria-hidden="true"></span> GitHub
           </a>
+
+          <div class="cv-dropdown">
+            <a class="btn" data-cv-toggle>
+              <span class="dot" aria-hidden="true"></span> Curriculum
+            </a>
+            <div class="cv-menu" data-cv-menu>
+              <a href="/AlbertoFardin-CV.pdf">• Senior Software Engineer CV</a>
+              <a href="/AlbertoFardin-CV2.pdf">• Social Media Strategist CV</a>
+            </div>
+          </div>
         </div>
       </section>
     </main>
@@ -140,5 +142,34 @@
     </script>
     <script src="assets/particles.min.js" defer></script>
     <script src="assets/app.js" defer></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var toggle = document.querySelector("[data-cv-toggle]");
+        var menu = document.querySelector("[data-cv-menu]");
+
+        if (!toggle || !menu) return;
+
+        // Apri e chiudi il menu cliccando sul pulsante
+        toggle.addEventListener("click", function (event) {
+          event.preventDefault();
+          menu.classList.toggle("is-open");
+        });
+
+        // Chiudi il menu cliccando fuori
+        document.addEventListener("click", function (event) {
+          var isClickInside =
+            menu.contains(event.target) || toggle.contains(event.target);
+
+          if (!isClickInside) {
+            menu.classList.remove("is-open");
+          }
+        });
+
+        // Chiudi il menu dopo il click su una voce
+        menu.addEventListener("click", function () {
+          menu.classList.remove("is-open");
+        });
+      });
+    </script>
   </body>
 </html>
