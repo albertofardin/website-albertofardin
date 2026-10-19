@@ -1,0 +1,1962 @@
+<title>Alberto Fardin</title>
+<meta name="claude:viewport-fit-sides" content="cover" />
+<meta
+  name="description"
+  content="Alberto Fardin, Senior Software Engineer & Creative Director. Portfolio: Arcana Nexus, SeeCommerce PXM, esperienze e competenze."
+/>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+/>
+<style>
+  /* Layout: colonna editoriale 1180px; due casi studio come fasce a tutta larghezza (Nexus = notte indaco fissa, SeeCommerce = carta), poi CV compatto e contatti. */
+  :root {
+    --paper: #f4f5fa;
+    --surface: #ffffff;
+    --ink: #121631;
+    --muted: #565d7e;
+    --line: #dcdfeb;
+    --accent: #3f5bea;
+    --accent-soft: #e6eafe;
+    --night: #0d1130;
+    --night-2: #161b45;
+    --night-ink: #e8eafb;
+    --night-muted: #a3a9d4;
+    --night-line: #2a3068;
+    --logo-filter: none;
+    --shadow:
+      0 1px 2px rgb(18 22 49 / 0.06), 0 12px 32px -12px rgb(18 22 49 / 0.18);
+
+    --f-display:
+      "Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+    --f-body: "Figtree", "Helvetica Neue", "Segoe UI", system-ui, sans-serif;
+    --f-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+    --s-xs: 0.8125rem;
+    --s-sm: 0.9375rem;
+    --s-md: 1.0625rem;
+    --s-lg: 1.375rem;
+    --s-xl: clamp(1.75rem, 3.2vw, 2.5rem);
+    --s-2xl: clamp(2.5rem, 6vw, 4.25rem);
+    --s-hero: clamp(3rem, 9vw, 6.75rem);
+    --wrap: 1180px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --paper: #0a0c1a;
+      --surface: #12152b;
+      --ink: #e9ebf6;
+      --muted: #9ba1c2;
+      --line: #252a48;
+      --accent: #8197ff;
+      --accent-soft: #1b2252;
+      --night: #070920;
+      --night-2: #10143a;
+      --night-line: #262c63;
+      --logo-filter: invert(1) brightness(1.6);
+      --shadow: 0 1px 2px rgb(0 0 0 / 0.4), 0 16px 40px -16px rgb(0 0 0 / 0.7);
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --paper: #0a0c1a;
+    --surface: #12152b;
+    --ink: #e9ebf6;
+    --muted: #9ba1c2;
+    --line: #252a48;
+    --accent: #8197ff;
+    --accent-soft: #1b2252;
+    --night: #070920;
+    --night-2: #10143a;
+    --night-line: #262c63;
+    --logo-filter: invert(1) brightness(1.6);
+    --shadow: 0 1px 2px rgb(0 0 0 / 0.4), 0 16px 40px -16px rgb(0 0 0 / 0.7);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 72px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      transition: none !important;
+      animation: none !important;
+    }
+  }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font: 400 var(--s-md)/1.6 var(--f-body);
+    -webkit-font-smoothing: antialiased;
+  }
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0 0 auto;
+    height: env(safe-area-inset-top, 0px);
+    z-index: 10;
+    background: var(--paper);
+  }
+  body {
+    margin: 0;
+  }
+  figure {
+    margin: 0;
+  }
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  a {
+    color: inherit;
+  }
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+  h1,
+  h2,
+  h3 {
+    font-family: var(--f-display);
+    text-wrap: balance;
+    margin: 0;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+  }
+  p {
+    margin: 0;
+  }
+  .wrap {
+    max-width: var(--wrap);
+    margin-inline: auto;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+  }
+  @media (min-width: 720px) {
+    .wrap {
+      padding-left: max(32px, env(safe-area-inset-left, 0px));
+      padding-right: max(32px, env(safe-area-inset-right, 0px));
+    }
+  }
+  .label {
+    font: 500 var(--s-xs)/1.3 var(--f-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+  }
+  .rule {
+    display: grid;
+    gap: 10px;
+  }
+  .rule::after {
+    content: "";
+    height: 2px;
+    background: var(--accent);
+    width: 100%;
+  }
+  .prose {
+    max-width: 62ch;
+    color: var(--muted);
+  }
+  .prose strong {
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  /* nav */
+  .nav {
+    position: sticky;
+    top: env(safe-area-inset-top, 0px);
+    z-index: 5;
+    background: color-mix(in srgb, var(--paper) 88%, transparent);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav .wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding-block: 14px;
+  }
+  .nav b {
+    font: 700 1.05rem/1 var(--f-display);
+    letter-spacing: -0.01em;
+  }
+  .nav ul {
+    list-style: none;
+    display: flex;
+    gap: clamp(12px, 2.5vw, 28px);
+    margin: 0;
+    padding: 0;
+    font-size: var(--s-sm);
+  }
+  .nav a {
+    text-decoration: none;
+    color: var(--muted);
+  }
+  .nav a:hover {
+    color: var(--ink);
+  }
+  @media (max-width: 560px) {
+    .nav ul li:not(.keep) {
+      display: none;
+    }
+  }
+
+  /* hero */
+  .hero > .wrap {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding-block: clamp(48px, 8vw, 96px) clamp(40px, 6vw, 72px);
+    align-items: end;
+  }
+  @media (min-width: 900px) {
+    .hero > .wrap {
+      grid-template-columns: 1.55fr 1fr;
+    }
+  }
+  .hero .label {
+    margin-bottom: 18px;
+  }
+  .hero h1 {
+    font-size: var(--s-hero);
+    font-weight: 800;
+    letter-spacing: -0.045em;
+    line-height: 0.92;
+  }
+  .hero h1 span {
+    color: var(--accent);
+  }
+  .hero .role {
+    font: 600 var(--s-lg)/1.3 var(--f-body);
+    margin-top: 18px;
+  }
+  .hero .lead {
+    margin-top: 22px;
+    font-size: 1.1875rem;
+    line-height: 1.55;
+    max-width: 54ch;
+    color: var(--muted);
+  }
+  .cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 30px;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 18px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: var(--s-sm);
+    text-decoration: none;
+    border: 1.5px solid var(--ink);
+    transition:
+      background 0.2s,
+      color 0.2s;
+  }
+  .btn.primary {
+    background: var(--ink);
+    color: var(--paper);
+  }
+  .btn:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+  }
+  .portrait {
+    position: relative;
+    justify-self: start;
+    max-width: 340px;
+    width: 100%;
+  }
+  @media (min-width: 900px) {
+    .portrait {
+      justify-self: end;
+    }
+  }
+  .portrait img {
+    border-radius: 22px;
+    border: 3px solid var(--accent);
+    aspect-ratio: 5 / 6;
+    object-fit: cover;
+    width: 100%;
+  }
+  .portrait figcaption {
+    position: absolute;
+    left: -14px;
+    bottom: 22px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow);
+    border-radius: 12px;
+    padding: 10px 14px;
+    font-size: var(--s-xs);
+    line-height: 1.4;
+  }
+  .portrait figcaption b {
+    display: block;
+    font-size: var(--s-sm);
+  }
+  .dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #22a06b;
+    margin-right: 6px;
+    box-shadow: 0 0 0 4px rgb(34 160 107 / 0.18);
+  }
+  .facts {
+    border-block: 1px solid var(--line);
+  }
+  .facts .wrap {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 0;
+  }
+  .facts div {
+    padding-block: 18px;
+    padding-right: 16px;
+  }
+  .facts dt {
+    font: 500 var(--s-xs)/1.3 var(--f-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+  }
+  .facts dd {
+    margin: 6px 0 0;
+    font-weight: 600;
+  }
+
+  /* sezioni */
+  section {
+    padding-block: clamp(64px, 9vw, 120px);
+  }
+  .head {
+    display: grid;
+    gap: 18px;
+    margin-bottom: clamp(32px, 5vw, 56px);
+  }
+  .head h2 {
+    font-size: var(--s-2xl);
+    font-weight: 800;
+  }
+
+  /* Arcana Nexus */
+  .nexus {
+    background: var(--night);
+    color: var(--night-ink);
+    background-image:
+      radial-gradient(120% 60% at 85% 0%, #2a2f86 0%, transparent 60%),
+      radial-gradient(80% 50% at 0% 100%, #3a1030 0%, transparent 60%);
+  }
+  .nexus .label {
+    color: var(--night-muted);
+  }
+  .nexus .rule::after {
+    background: #8197ff;
+  }
+  .nexus .prose {
+    color: var(--night-muted);
+  }
+  .nexus .prose strong {
+    color: var(--night-ink);
+  }
+  .nexus-top {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: 960px) {
+    .nexus-top {
+      grid-template-columns: 1.2fr 1fr;
+      align-items: end;
+    }
+  }
+  .nexus h2 {
+    font-size: var(--s-2xl);
+    font-weight: 800;
+  }
+  .quote {
+    font: 500 var(--s-xl)/1.15 var(--f-display);
+    letter-spacing: -0.02em;
+    color: #c3ccff;
+    margin-top: 18px;
+  }
+  .meta {
+    display: grid;
+    gap: 14px;
+    font-size: var(--s-sm);
+  }
+  .meta div {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 12px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--night-line);
+  }
+  .meta dt {
+    font: 500 var(--s-xs)/1.6 var(--f-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--night-muted);
+  }
+  .meta dd {
+    margin: 0;
+  }
+  .meta a {
+    color: #c3ccff;
+  }
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    margin-block: 48px 40px;
+    border-top: 1px solid var(--night-line);
+  }
+  .stats div {
+    padding: 18px 16px 0 0;
+  }
+  .stats b {
+    display: block;
+    font: 700 var(--s-xl)/1 var(--f-display);
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.02em;
+  }
+  .stats span {
+    display: block;
+    margin-top: 8px;
+    font-size: var(--s-xs);
+    color: var(--night-muted);
+  }
+  .stats-note {
+    font: 400 var(--s-xs)/1.4 var(--f-mono);
+    color: var(--night-muted);
+    margin-top: -24px;
+    margin-bottom: 40px;
+  }
+
+  .browser {
+    border-radius: 14px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow:
+      0 30px 80px -30px rgb(0 0 0 / 0.8),
+      0 0 0 1px rgb(255 255 255 / 0.08);
+  }
+  .browser .bar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 14px;
+    background: #1c2152;
+  }
+  .browser .bar i {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #3a4185;
+  }
+  .browser .bar span {
+    margin-left: 12px;
+    font: 400 0.75rem/1 var(--f-mono);
+    color: var(--night-muted);
+  }
+  .zoom {
+    cursor: zoom-in;
+  }
+
+  .tour {
+    margin-top: 64px;
+    display: grid;
+    gap: 28px;
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: 960px) {
+    .tour {
+      grid-template-columns: 300px 1fr;
+      align-items: start;
+    }
+  }
+  .tabs {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+  }
+  @media (min-width: 960px) {
+    .tabs {
+      flex-direction: column;
+      overflow: visible;
+    }
+  }
+  .tab {
+    flex: none;
+    text-align: left;
+    font: inherit;
+    color: var(--night-muted);
+    background: transparent;
+    border: 1px solid var(--night-line);
+    border-radius: 12px;
+    padding: 12px 14px;
+    cursor: pointer;
+    transition:
+      background 0.2s,
+      color 0.2s,
+      border-color 0.2s;
+  }
+  .tab b {
+    display: block;
+    color: var(--night-ink);
+    font-weight: 600;
+    font-size: var(--s-sm);
+  }
+  .tab small {
+    display: none;
+    font-size: var(--s-xs);
+    line-height: 1.45;
+    margin-top: 4px;
+  }
+  @media (min-width: 960px) {
+    .tab small {
+      display: block;
+    }
+  }
+  .tab:hover {
+    border-color: #5a63b8;
+  }
+  .tab[aria-selected="true"] {
+    background: var(--night-2);
+    border-color: #8197ff;
+  }
+  .panel figcaption {
+    margin-top: 14px;
+    font-size: var(--s-sm);
+    color: var(--night-muted);
+    max-width: 70ch;
+  }
+  .panel img {
+    max-height: 640px;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  .pillars {
+    margin-top: 80px;
+    display: grid;
+    gap: 1px;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    background: var(--night-line);
+    border: 1px solid var(--night-line);
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  .pillars div {
+    background: var(--night);
+    padding: 22px;
+  }
+  .pillars h3 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+  .pillars p {
+    margin-top: 8px;
+    font-size: var(--s-sm);
+    color: var(--night-muted);
+  }
+
+  .phones {
+    margin-top: 80px;
+  }
+  .phones ul {
+    list-style: none;
+    margin: 28px 0 0;
+    padding: 0 0 8px;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(170px, 1fr);
+    gap: 20px;
+    overflow-x: auto;
+  }
+  .phones li img {
+    border-radius: 26px;
+    border: 6px solid #232860;
+    background: #232860;
+  }
+  .phones li p {
+    margin-top: 10px;
+    font-size: var(--s-xs);
+    color: var(--night-muted);
+  }
+
+  .camps {
+    margin-top: 80px;
+    display: grid;
+    gap: 24px;
+  }
+  .camps ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+  .camps li {
+    flex: 1 1 130px;
+    height: 96px;
+    display: grid;
+    place-items: center;
+    background: var(--night-2);
+    border: 1px solid var(--night-line);
+    border-radius: 14px;
+    padding: 14px;
+  }
+  .camps li img {
+    max-height: 68px;
+    width: auto;
+    object-fit: contain;
+  }
+  .larp {
+    margin-top: 80px;
+    display: grid;
+    gap: 28px;
+    grid-template-columns: 1fr;
+    align-items: center;
+  }
+  @media (min-width: 900px) {
+    .larp {
+      grid-template-columns: 1.4fr 1fr;
+    }
+  }
+  .larp img {
+    border-radius: 16px;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    width: 100%;
+  }
+  .chips {
+    list-style: none;
+    margin: 18px 0 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .chips li {
+    font: 400 var(--s-xs)/1 var(--f-mono);
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: 1px solid var(--night-line);
+    color: var(--night-ink);
+  }
+  .credits {
+    margin-top: 20px;
+    font-size: var(--s-sm);
+    color: var(--night-muted);
+  }
+
+  /* SeeCommerce */
+  .sc-top {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: 960px) {
+    .sc-top {
+      grid-template-columns: 1.2fr 1fr;
+      align-items: end;
+    }
+  }
+  .sc-logo {
+    height: 26px;
+    width: auto;
+    filter: var(--logo-filter);
+    margin-bottom: 22px;
+  }
+  .did {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0;
+    border-top: 1px solid var(--line);
+  }
+  .did li {
+    padding: 14px 0;
+    border-bottom: 1px solid var(--line);
+    font-size: var(--s-sm);
+    color: var(--muted);
+  }
+  .did b {
+    display: block;
+    color: var(--ink);
+    font-size: var(--s-md);
+    font-weight: 600;
+  }
+  .shot {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: clamp(16px, 3vw, 36px);
+  }
+  .shot figcaption {
+    margin-top: 16px;
+    font-size: var(--s-sm);
+    color: var(--muted);
+  }
+  .sc-grid {
+    margin-top: 20px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: 820px) {
+    .sc-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  .sc-grid img {
+    margin-inline: auto;
+    max-height: 360px;
+    width: auto;
+  }
+  .brands {
+    margin-top: 56px;
+    display: grid;
+    gap: 18px;
+  }
+  .brands ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px clamp(20px, 4vw, 44px);
+  }
+  .brands img {
+    height: 56px;
+    width: auto;
+    filter: var(--logo-filter);
+    opacity: 0.85;
+  }
+  .brands img.small {
+    height: 32px;
+  }
+
+  /* CV */
+  .cv {
+    border-top: 1px solid var(--line);
+  }
+  .jobs {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+  }
+  .job {
+    display: grid;
+    gap: 8px 32px;
+    grid-template-columns: 1fr;
+    padding-block: 26px;
+    border-top: 1px solid var(--line);
+  }
+  @media (min-width: 820px) {
+    .job {
+      grid-template-columns: 200px 1fr;
+    }
+  }
+  .job time {
+    font: 500 var(--s-xs)/1.8 var(--f-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+    font-variant-numeric: tabular-nums;
+  }
+  .job h3 {
+    font-size: var(--s-lg);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+  }
+  .job h3 small {
+    display: block;
+    font: 500 var(--s-sm)/1.5 var(--f-body);
+    color: var(--accent);
+    letter-spacing: 0;
+    margin-top: 4px;
+  }
+  .job ul {
+    margin: 12px 0 0;
+    padding-left: 1.1em;
+    color: var(--muted);
+    font-size: var(--s-sm);
+    display: grid;
+    gap: 6px;
+    max-width: 70ch;
+  }
+
+  .cols {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: 820px) {
+    .cols {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  .cols h3 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-bottom: 14px;
+  }
+  .tags {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .tags li {
+    font-size: var(--s-sm);
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: var(--accent-soft);
+    color: var(--ink);
+  }
+  .plain {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 10px;
+    font-size: var(--s-sm);
+    color: var(--muted);
+  }
+  .plain li {
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--line);
+  }
+  .plain b {
+    display: block;
+    color: var(--ink);
+    font-weight: 600;
+  }
+  .split {
+    display: grid;
+    gap: 56px;
+    grid-template-columns: 1fr;
+    margin-top: 88px;
+  }
+  @media (min-width: 820px) {
+    .split {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  /* contatti */
+  .contact {
+    background: var(--surface);
+    border-top: 1px solid var(--line);
+  }
+  .contact h2 {
+    font-size: var(--s-2xl);
+    font-weight: 800;
+    max-width: 16ch;
+  }
+  .contact .mail {
+    display: inline-block;
+    margin-top: 28px;
+    font: 700 var(--s-xl)/1.1 var(--f-display);
+    letter-spacing: -0.02em;
+    color: var(--accent);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 6px;
+    word-break: break-word;
+  }
+  .contact dl {
+    margin: 40px 0 0;
+    display: grid;
+    gap: 0 32px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  .contact dl div {
+    padding-block: 16px;
+    border-top: 1px solid var(--line);
+  }
+  .contact dd {
+    margin: 4px 0 0;
+    font-weight: 600;
+  }
+  footer {
+    padding-block: 28px;
+    font-size: var(--s-xs);
+    color: var(--muted);
+  }
+  footer .wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  dialog {
+    border: 0;
+    padding: 0;
+    background: transparent;
+    max-width: min(1280px, 94vw);
+    max-height: 92vh;
+  }
+  dialog::backdrop {
+    background: rgb(5 7 20 / 0.85);
+  }
+  dialog img {
+    max-height: 92vh;
+    width: auto;
+    border-radius: 10px;
+  }
+  dialog button {
+    position: fixed;
+    top: calc(14px + env(safe-area-inset-top, 0px));
+    right: calc(14px + env(safe-area-inset-right, 0px));
+    font: 600 var(--s-sm) var(--f-body);
+    background: #fff;
+    color: #121631;
+    border: 0;
+    border-radius: 999px;
+    padding: 10px 16px;
+    cursor: pointer;
+  }
+</style>
+
+<nav class="nav" aria-label="Sezioni">
+  <div class="wrap">
+    <b>Alberto Fardin</b>
+    <ul>
+      <li><a href="#esperienze">Esperienze</a></li>
+      <li class="keep"><a href="#contatti">Contatti</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <p class="label">Portfolio · Padova</p>
+      <h1>Alberto<br />Fardin<span>.</span></h1>
+      <p class="role">Senior Software Engineer &amp; Creative Director</p>
+      <p class="lead">
+        Progetto e costruisco prodotti digitali in cui l'interfaccia conta
+        quanto il codice. Per dieci anni ho sviluppato il PIM usato dai brand
+        della moda italiana; oggi guido lo sviluppo del gestionale che fa vivere
+        un'associazione di giochi di ruolo dal vivo.
+      </p>
+      <div class="cta">
+        <a class="btn primary" href="#nexus">Guarda i progetti</a>
+        <a class="btn" href="mailto:info@albertofardin.it">Scrivimi</a>
+        <a
+          class="btn"
+          href="https://www.albertofardin.it/AlbertoFardin%20CV.pdf"
+          target="_blank"
+          rel="noopener"
+          >CV in PDF</a
+        >
+      </div>
+    </div>
+    <figure class="portrait">
+      <img
+        src="{{photo}}"
+        alt="Ritratto di Alberto Fardin"
+        width="520"
+        height="624"
+      />
+      <figcaption>
+        <b><span class="dot" aria-hidden="true"></span>Disponibile subito</b
+        >Assunzione con agevolazioni NASpI
+      </figcaption>
+    </figure>
+  </div>
+  <div class="facts">
+    <dl class="wrap" style="margin-block: 0">
+      <div>
+        <dt>Esperienza</dt>
+        <dd>+10 anni di React.js</dd>
+      </div>
+      <div>
+        <dt>Focus</dt>
+        <dd>Front-end, UX, prodotto</dd>
+      </div>
+      <div>
+        <dt>Metodo</dt>
+        <dd>Scrum, code review, test</dd>
+      </div>
+      <div>
+        <dt>Base</dt>
+        <dd>Piombino Dese (PD)</dd>
+      </div>
+    </dl>
+  </div>
+</header>
+
+<section class="nexus" id="nexus" aria-labelledby="nexus-title">
+  <div class="wrap">
+    <div class="nexus-top">
+      <div>
+        <p class="label">Caso studio · Arcana Domine APS · 2025 – oggi</p>
+        <h2 id="nexus-title" style="margin-top: 14px">Arcana Nexus</h2>
+        <p class="quote">
+          Il LARP vive in campo.<br />Tutto il resto, nel Nexus.
+        </p>
+        <p class="prose" style="margin-top: 22px">
+          Chi organizza un gioco di ruolo dal vivo dovrebbe passare il tempo a
+          raccontare storie, non a rincorrere fogli di calcolo, email e messaggi
+          persi. Arcana Nexus è il portale unico dell'associazione:
+          <strong
+            >personaggi, catalogo di gioco, eventi, iscrizioni, pagamenti e
+            bilancio</strong
+          >
+          per ogni campagna, aperto a giocatori e master, su desktop e
+          smartphone.
+        </p>
+      </div>
+      <dl class="meta">
+        <div>
+          <dt>Ruolo</dt>
+          <dd>
+            Ideazione, product design, project management e sviluppo full-stack
+          </dd>
+        </div>
+        <div>
+          <dt>Team</dt>
+          <dd>Con Nico Moro (backend) e Mattia Fattorello (sviluppo)</dd>
+        </div>
+        <div>
+          <dt>Utenti</dt>
+          <dd>
+            Giocatori, master e direttivo di un'associazione multi-campagna
+          </dd>
+        </div>
+        <div>
+          <dt>Guide</dt>
+          <dd>
+            Ho scritto e impaginato le guide per giocatori (10 pagine) e master
+            (59 pagine)
+          </dd>
+        </div>
+      </dl>
+    </div>
+
+    <div class="stats">
+      <div><b>1.155</b><span>commit, 727 firmati da me</span></div>
+      <div><b>36</b><span>modelli dati Prisma</span></div>
+      <div><b>97</b><span>endpoint API</span></div>
+      <div><b>193</b><span>file di test Vitest</span></div>
+    </div>
+    <p class="stats-note">
+      Numeri presi dal repository, ottobre 2026. Primo commit: 17 febbraio 2025.
+    </p>
+
+    <figure class="browser">
+      <div class="bar" aria-hidden="true">
+        <i></i><i></i><i></i><span>nexus · Mondo Arcana</span>
+      </div>
+      <img
+        class="zoom"
+        src="{{dashboard}}"
+        alt="Dashboard di una campagna in Arcana Nexus: prossimo evento, personaggio con punti esperienza, azioni da gestire"
+        width="1280"
+        height="800"
+      />
+    </figure>
+
+    <div class="tour">
+      <div
+        class="tabs"
+        role="tablist"
+        aria-label="Funzionalità di Arcana Nexus"
+      >
+        <button
+          class="tab"
+          role="tab"
+          id="t-bacheca"
+          aria-controls="p-bacheca"
+          aria-selected="true"
+        >
+          <b>Bacheca</b
+          ><small>Campagne dell'associazione e prossimi eventi.</small>
+        </button>
+        <button
+          class="tab"
+          role="tab"
+          id="t-vetrina"
+          aria-controls="p-vetrina"
+          aria-selected="false"
+          tabindex="-1"
+        >
+          <b>Sito vetrina</b><small>La pagina pubblica di ogni campagna.</small>
+        </button>
+        <button
+          class="tab"
+          role="tab"
+          id="t-lore"
+          aria-controls="p-lore"
+          aria-selected="false"
+          tabindex="-1"
+        >
+          <b>Ambientazione</b
+          ><small>Pagine di lore con testo ricco e immagini.</small>
+        </button>
+        <button
+          class="tab"
+          role="tab"
+          id="t-master"
+          aria-controls="p-master"
+          aria-selected="false"
+          tabindex="-1"
+        >
+          <b>Master view</b
+          ><small>La scheda personaggio vista dallo staff.</small>
+        </button>
+        <button
+          class="tab"
+          role="tab"
+          id="t-missive"
+          aria-controls="p-missive"
+          aria-selected="false"
+          tabindex="-1"
+        >
+          <b>Missive</b><small>Le lettere in gioco tra personaggi.</small>
+        </button>
+        <button
+          class="tab"
+          role="tab"
+          id="t-feature"
+          aria-controls="p-feature"
+          aria-selected="false"
+          tabindex="-1"
+        >
+          <b>Feature</b><small>Ogni campagna sceglie i suoi strumenti.</small>
+        </button>
+        <button
+          class="tab"
+          role="tab"
+          id="t-report"
+          aria-controls="p-report"
+          aria-selected="false"
+          tabindex="-1"
+        >
+          <b>Report</b><small>La campagna in numeri, esportabile in CSV.</small>
+        </button>
+        <button
+          class="tab"
+          role="tab"
+          id="t-stampa"
+          aria-controls="p-stampa"
+          aria-selected="false"
+          tabindex="-1"
+        >
+          <b>Area stampa</b
+          ><small>Editor di impaginazione per schede e cartellini.</small>
+        </button>
+        <button
+          class="tab"
+          role="tab"
+          id="t-bilancio"
+          aria-controls="p-bilancio"
+          aria-selected="false"
+          tabindex="-1"
+        >
+          <b>Bilancio</b
+          ><small>Iscrizioni pagate e rimborsi, in automatico.</small>
+        </button>
+      </div>
+      <div>
+        <figure
+          class="panel"
+          role="tabpanel"
+          id="p-bacheca"
+          aria-labelledby="t-bacheca"
+        >
+          <div class="browser">
+            <img
+              class="zoom"
+              src="{{bacheca}}"
+              alt="Bacheca di Arcana Nexus con le campagne e i prossimi eventi"
+              loading="lazy"
+            />
+          </div>
+          <figcaption>
+            Dopo l'accesso si atterra sulla Bacheca: un saluto personale, il
+            collegamento alla community, le campagne dell'associazione e i
+            prossimi eventi con lo stato delle iscrizioni.
+          </figcaption>
+        </figure>
+        <figure
+          class="panel"
+          role="tabpanel"
+          id="p-vetrina"
+          aria-labelledby="t-vetrina"
+          hidden
+        >
+          <div class="browser">
+            <img
+              class="zoom"
+              src="{{vetrina}}"
+              alt="Sito vetrina pubblico di una campagna"
+              loading="lazy"
+            />
+          </div>
+          <figcaption>
+            Ogni campagna ha un sito vetrina all'indirizzo del suo slug:
+            copertina, prossimo evento, descrizione, carosello, staff e
+            personaggi. I colori e la trama li sceglie l'head master.
+          </figcaption>
+        </figure>
+        <figure
+          class="panel"
+          role="tabpanel"
+          id="p-lore"
+          aria-labelledby="t-lore"
+          hidden
+        >
+          <div class="browser">
+            <img
+              class="zoom"
+              src="{{lore}}"
+              alt="Pagina di ambientazione con testo formattato e immagini"
+              loading="lazy"
+            />
+          </div>
+          <figcaption>
+            Le pagine di ambientazione si scrivono con un editor Tiptap:
+            sottotitoli, link ad altre pagine, immagini con didascalia,
+            citazioni. La visibilità si calcola lato server, così i segreti
+            restano segreti.
+          </figcaption>
+        </figure>
+        <figure
+          class="panel"
+          role="tabpanel"
+          id="p-master"
+          aria-labelledby="t-master"
+          hidden
+        >
+          <div class="browser">
+            <img
+              class="zoom"
+              src="{{masterview}}"
+              alt="Scheda personaggio in modalità master"
+              loading="lazy"
+            />
+          </div>
+          <figcaption>
+            In Master View lo staff modifica ogni campo della scheda e decide,
+            voce per voce, cosa mostrare al giocatore.
+          </figcaption>
+        </figure>
+        <figure
+          class="panel"
+          role="tabpanel"
+          id="p-missive"
+          aria-labelledby="t-missive"
+          hidden
+        >
+          <div class="browser">
+            <img
+              class="zoom"
+              src="{{missive}}"
+              alt="Scrittura di una nuova missiva"
+              loading="lazy"
+            />
+          </div>
+          <figcaption>
+            Le missive sono la posta in gioco tra personaggi, PNG e staff, con
+            limiti per evento configurabili e notifiche push all'arrivo di ogni
+            risposta.
+          </figcaption>
+        </figure>
+        <figure
+          class="panel"
+          role="tabpanel"
+          id="p-feature"
+          aria-labelledby="t-feature"
+          hidden
+        >
+          <div class="browser">
+            <img
+              class="zoom"
+              src="{{feature}}"
+              alt="Configurazione della feature Progressi e Talenti"
+              loading="lazy"
+            />
+          </div>
+          <figcaption>
+            Missive, downtime, progressi e "Chiedi allo staff" sono feature
+            attivabili per campagna, ognuna con la sua configurazione. Il Nexus
+            si adatta alla storia, non il contrario.
+          </figcaption>
+        </figure>
+        <figure
+          class="panel"
+          role="tabpanel"
+          id="p-report"
+          aria-labelledby="t-report"
+          hidden
+        >
+          <div class="browser">
+            <img
+              class="zoom"
+              src="{{report}}"
+              alt="Report dei personaggi per razza, classe e stato"
+              loading="lazy"
+            />
+          </div>
+          <figcaption>
+            Il report fotografa la campagna: personaggi per razza, per classe,
+            per stato. Utile per bilanciare il gioco o preparare una trama su
+            misura.
+          </figcaption>
+        </figure>
+        <figure
+          class="panel"
+          role="tabpanel"
+          id="p-stampa"
+          aria-labelledby="t-stampa"
+          hidden
+        >
+          <div class="browser">
+            <img
+              class="zoom"
+              src="{{stampa}}"
+              alt="Area stampa con anteprima del layout"
+              loading="lazy"
+            />
+          </div>
+          <figcaption>
+            L'Area Stampa è un piccolo editor di impaginazione basato su pdfme:
+            schede personaggio e cartellini dei talenti pronti da stampare per
+            l'evento.
+          </figcaption>
+        </figure>
+        <figure
+          class="panel"
+          role="tabpanel"
+          id="p-bilancio"
+          aria-labelledby="t-bilancio"
+          hidden
+        >
+          <div class="browser">
+            <img
+              class="zoom"
+              src="{{bilancio}}"
+              alt="Bilancio della campagna con grafico e movimenti"
+              loading="lazy"
+            />
+          </div>
+          <figcaption>
+            Il bilancio raccoglie da solo le iscrizioni pagate con PayPal e i
+            rimborsi delle disiscrizioni. I movimenti manuali si aggiungono a
+            mano.
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="pillars">
+      <div>
+        <h3>Ovunque, su ogni schermo</h3>
+        <p>Una web app installabile, senza passare dagli store.</p>
+      </div>
+      <div>
+        <h3>Tutto arriva, subito</h3>
+        <p>Missive, risposte ai downtime e comunicazioni via notifica push.</p>
+      </div>
+      <div>
+        <h3>Libertà ai master</h3>
+        <p>
+          Razze, talenti, regole ed eventi si costruiscono su misura per ogni
+          campagna.
+        </p>
+      </div>
+      <div>
+        <h3>Meno burocrazia, più gioco</h3>
+        <p>
+          Approvare un PG, premiare un evento, stampare i cartellini: un clic.
+        </p>
+      </div>
+    </div>
+
+    <div class="phones">
+      <div class="rule"><p class="label">Sul telefono</p></div>
+      <ul>
+        <li>
+          <img
+            class="zoom"
+            src="{{m_P_p03_1}}"
+            alt="Bacheca su smartphone"
+            loading="lazy"
+            width="420"
+            height="909"
+          />
+          <p>La Bacheca</p>
+        </li>
+        <li>
+          <img
+            class="zoom"
+            src="{{m_P_p04_1}}"
+            alt="Dashboard di campagna su smartphone"
+            loading="lazy"
+            width="420"
+            height="909"
+          />
+          <p>Dashboard di campagna</p>
+        </li>
+        <li>
+          <img
+            class="zoom"
+            src="{{m_P_p05_1}}"
+            alt="Scheda personaggio su smartphone"
+            loading="lazy"
+            width="420"
+            height="909"
+          />
+          <p>Scheda personaggio</p>
+        </li>
+        <li>
+          <img
+            class="zoom"
+            src="{{m_P_p06_2}}"
+            alt="Conversazione di missive su smartphone"
+            loading="lazy"
+            width="420"
+            height="909"
+          />
+          <p>Una missiva</p>
+        </li>
+        <li>
+          <img
+            class="zoom"
+            src="{{m_P_p09_2}}"
+            alt="Pagina di ambientazione su smartphone"
+            loading="lazy"
+            width="420"
+            height="909"
+          />
+          <p>Ambientazione</p>
+        </li>
+      </ul>
+    </div>
+
+    <div class="camps">
+      <div class="rule"><p class="label">Le campagne di Arcana Domine</p></div>
+      <ul>
+        <li><img src="{{cp_1801}}" alt="1801" loading="lazy" /></li>
+        <li><img src="{{cp_heres}}" alt="Heres Aessigea" loading="lazy" /></li>
+        <li>
+          <img src="{{cp_isola}}" alt="L'isola dei dannati" loading="lazy" />
+        </li>
+        <li><img src="{{cp_kor}}" alt="Kor-35" loading="lazy" /></li>
+        <li>
+          <img
+            src="{{cp_nuovafrontiera}}"
+            alt="Nuova Frontiera"
+            loading="lazy"
+          />
+        </li>
+        <li>
+          <img
+            src="{{cp_postitalica}}"
+            alt="Post-Italica 2125"
+            loading="lazy"
+          />
+        </li>
+        <li>
+          <img src="{{cp_rhymil}}" alt="Rhymil, una nuova era" loading="lazy" />
+        </li>
+      </ul>
+    </div>
+
+    <div class="larp">
+      <img
+        class="zoom"
+        src="{{larp}}"
+        alt="Battaglia durante un evento Arcana Domine del 2023"
+        loading="lazy"
+      />
+      <div>
+        <p class="label">Per chi è fatto</p>
+        <p class="prose" style="margin-top: 12px">
+          Un evento Arcana Domine nel 2023. Il gioco succede qui, nel fango e
+          con le spade in lattice. Il Nexus si occupa di tutto quello che
+          succede prima e dopo.
+        </p>
+        <ul class="chips" aria-label="Stack tecnico">
+          <li>Next.js 16</li>
+          <li>React 19</li>
+          <li>TypeScript</li>
+          <li>PostgreSQL</li>
+          <li>Prisma</li>
+          <li>Better Auth</li>
+          <li>TanStack Query</li>
+          <li>Tailwind</li>
+          <li>Radix</li>
+          <li>Tiptap</li>
+          <li>PayPal</li>
+          <li>Web Push</li>
+          <li>Vitest</li>
+        </ul>
+        <p class="credits">
+          Multi-tenant per campagna, ruoli per campagna e gruppi d'associazione,
+          impersonificazione per il supporto, PWA con notifiche.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sc" id="seecommerce" aria-labelledby="sc-title">
+  <div class="wrap">
+    <div class="sc-top">
+      <div>
+        <img
+          class="sc-logo"
+          src="{{sc_logo}}"
+          alt="SeeCommerce"
+          width="300"
+          height="38"
+        />
+        <p class="label">
+          Caso studio · WARDA Fashion Digitalization · 2015 – 2025
+        </p>
+        <h2
+          id="sc-title"
+          style="margin-top: 14px; font-size: var(--s-2xl); font-weight: 800"
+        >
+          SeeCommerce PXM
+        </h2>
+        <p class="prose" style="margin-top: 22px">
+          Piattaforma SaaS di WARDA che unisce <strong>PIM e DAM</strong>:
+          anagrafiche prodotto, media e contenuti editoriali in un solo posto,
+          distribuiti in modalità headless verso e-commerce, marketplace e
+          portali B2B. Per dieci anni ci ho lavorato come Senior Developer e UX
+          Designer.
+        </p>
+      </div>
+      <ul class="did">
+        <li>
+          <b>Modulo "Prodotti e Media"</b>Gestione degli articoli con immagini,
+          metadati e workflow di pubblicazione.
+        </li>
+        <li>
+          <b>Modulo "Utenti e Ruoli"</b>Creazione, modifica ed eliminazione
+          utenti con ruoli e permessi granulari.
+        </li>
+        <li>
+          <b>Libreria di componenti</b>Moduli React riutilizzabili ed
+          esportabili tra i prodotti.
+        </li>
+        <li>
+          <b>Coordinamento tecnico</b>Scrum su Jira, code review, mockup UX e
+          documentazione di consegna.
+        </li>
+      </ul>
+    </div>
+
+    <figure class="shot" style="margin-top: 56px">
+      <img
+        class="zoom"
+        src="{{sc_journey}}"
+        alt="Schema del percorso dei contenuti prodotto: dalle fonti all'API headless verso i canali di vendita"
+        loading="lazy"
+        width="1200"
+        height="753"
+      />
+      <figcaption>
+        Il percorso del contenuto prodotto: dalle fonti (shooting, testi,
+        traduzioni) all'API headless, fino a e-commerce, marketplace e
+        cataloghi.
+      </figcaption>
+    </figure>
+    <div class="sc-grid">
+      <figure class="shot">
+        <img
+          class="zoom"
+          src="{{sc_schede}}"
+          alt="Schede prodotto personalizzate per canale"
+          loading="lazy"
+        />
+        <figcaption>
+          Schede prodotto diverse per ogni canale, con traduzioni e categorie
+          dedicate.
+        </figcaption>
+      </figure>
+      <figure class="shot">
+        <img
+          class="zoom"
+          src="{{sc_team}}"
+          alt="Strumenti di collaborazione tra fotografi, copywriter e altri ruoli"
+          loading="lazy"
+        />
+        <figcaption>
+          Workflow di team: fotografo, copywriter e approvatori lavorano sullo
+          stesso articolo, con ruoli e permessi.
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="brands">
+      <div class="rule">
+        <p class="label">Alcuni brand che usano SeeCommerce</p>
+      </div>
+      <ul>
+        <li><img src="{{cl_buccellati}}" alt="Buccellati" loading="lazy" /></li>
+        <li>
+          <img
+            src="{{cl_brunellocuccinelli}}"
+            alt="Brunello Cucinelli"
+            loading="lazy"
+          />
+        </li>
+        <li>
+          <img
+            class="small"
+            src="{{cl_calzedonia}}"
+            alt="Calzedonia Group"
+            loading="lazy"
+          />
+        </li>
+        <li><img src="{{cl_campagnolo}}" alt="Campagnolo" loading="lazy" /></li>
+        <li><img src="{{cl_Missoni}}" alt="Missoni" loading="lazy" /></li>
+        <li><img src="{{cl_Vibram}}" alt="Vibram" loading="lazy" /></li>
+        <li><img src="{{cl_grunland}}" alt="Grunland" loading="lazy" /></li>
+      </ul>
+      <p style="font-size: var(--s-sm); color: var(--muted)">
+        Fonte:
+        <a href="https://www.seecommerce.it/" target="_blank" rel="noopener"
+          >seecommerce.it</a
+        >
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="cv" id="esperienze" aria-labelledby="exp-title">
+  <div class="wrap">
+    <div class="head">
+      <div class="rule"><p class="label">Percorso</p></div>
+      <h2 id="exp-title">Esperienze</h2>
+    </div>
+    <ol class="jobs" reversed>
+      <li class="job">
+        <time>ott 2025 – oggi</time>
+        <div>
+          <h3>
+            Responsabile Web &amp; Sviluppo<small>Arcana Domine APS</small>
+          </h3>
+          <ul>
+            <li>
+              Piattaforma gestionale centralizzata per utenti, dati, iscrizioni
+              ed eventi dell'associazione.
+            </li>
+            <li>
+              Dashboard amministrative self-service per i tesseramenti, con
+              pagamenti online via PayPal.
+            </li>
+            <li>
+              Sperimentazione di funzionalità basate su intelligenza artificiale
+              per automatizzare processi e contenuti.
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li class="job">
+        <time>gen 2015 – set 2025</time>
+        <div>
+          <h3>
+            Senior Developer &amp; User Experience Designer<small
+              >WARDA Fashion Digitalization</small
+            >
+          </h3>
+          <ul>
+            <li>
+              Sviluppo front-end di web application in JavaScript e React.
+            </li>
+            <li>
+              Coordinamento tecnico del team con Agile/Scrum, pianificazione su
+              Jira e code review.
+            </li>
+            <li>
+              Progettazione dei moduli "Prodotti e Media" e "Utenti e Ruoli" di
+              SeeCommerce.
+            </li>
+            <li>
+              Studio della UX con mockup realistici e documentazione tecnica di
+              consegna.
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li class="job">
+        <time>gen 2023 – set 2025</time>
+        <div>
+          <h3>
+            Social Media Strategist &amp; Creative Director<small
+              >Mandragora Web Studio</small
+            >
+          </h3>
+          <ul>
+            <li>
+              Ho fondato una web agency di sei professionisti per la presenza
+              online delle aziende.
+            </li>
+            <li>
+              Gestione del team dal concept alla consegna: task, controllo
+              qualità, tempi.
+            </li>
+            <li>Identità visive, immagine coordinata e campagne social.</li>
+          </ul>
+        </div>
+      </li>
+      <li class="job">
+        <time>set 2013 – gen 2015</time>
+        <div>
+          <h3>
+            Graphic Designer &amp; User Experience Designer<small
+              >Visionest</small
+            >
+          </h3>
+          <ul>
+            <li>Interfacce più chiare per le applicazioni aziendali.</li>
+            <li>Loghi e immagine coordinata dei prodotti.</li>
+            <li>Siti web accessibili e performanti su ogni piattaforma.</li>
+          </ul>
+        </div>
+      </li>
+    </ol>
+
+    <div class="split" id="competenze">
+      <div>
+        <div class="head" style="margin-bottom: 28px">
+          <div class="rule"><p class="label">Strumenti</p></div>
+          <h2>Competenze</h2>
+        </div>
+        <div class="cols" style="grid-template-columns: 1fr">
+          <div>
+            <h3>Sviluppo</h3>
+            <ul class="tags">
+              <li>React</li>
+              <li>Next.js</li>
+              <li>TypeScript</li>
+              <li>Node.js</li>
+              <li>HTML5</li>
+              <li>CSS3 / SCSS</li>
+              <li>JSS</li>
+              <li>Tailwind</li>
+              <li>Material UI</li>
+              <li>shadcn</li>
+              <li>Radix</li>
+              <li>React Hook Form</li>
+              <li>Zod</li>
+              <li>Tiptap</li>
+              <li>Prisma</li>
+              <li>PostgreSQL</li>
+              <li>Better Auth</li>
+              <li>TanStack Query</li>
+              <li>UploadThing</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Design</h3>
+            <ul class="tags">
+              <li>Figma</li>
+              <li>Storybook</li>
+              <li>Suite Adobe</li>
+              <li>Canva</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Qualità e strumenti</h3>
+            <ul class="tags">
+              <li>Vitest</li>
+              <li>Jest</li>
+              <li>Testing Library</li>
+              <li>ESLint</li>
+              <li>Prettier</li>
+              <li>Husky</li>
+              <li>Git</li>
+              <li>Bun</li>
+              <li>npm</li>
+              <li>Jira</li>
+              <li>Confluence</li>
+              <li>Bitbucket</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="head" style="margin-bottom: 28px">
+          <div class="rule"><p class="label">Come lavoro</p></div>
+          <h2>Approccio</h2>
+        </div>
+        <ul class="plain">
+          <li>
+            <b>Sviluppo incrementale e disciplinato</b>Rilasci piccoli,
+            versionati, con changelog e test.
+          </li>
+          <li><b>Onestà tecnica</b>Rigore nel refactoring e nelle stime.</li>
+          <li>
+            <b>Leadership di team</b>Priorità chiare, code review, attività di
+            team building su creatività e problem solving.
+          </li>
+          <li>
+            <b>Cura del dettaglio UI/UX</b>Estetica e funzionalità progettate
+            insieme.
+          </li>
+          <li>
+            <b>Comunicazione chiara</b>Con il team, con il cliente, con chi
+            userà il prodotto.
+          </li>
+        </ul>
+        <div class="head" style="margin: 56px 0 28px">
+          <div class="rule"><p class="label">Studi</p></div>
+          <h2>Formazione</h2>
+        </div>
+        <ul class="plain">
+          <li>
+            <b>Esperto della gestione e dello sviluppo delle Risorse Umane</b
+            >Programma GOL, Fondazione Consulenti per il Lavoro · 2025
+          </li>
+          <li>
+            <b>Diploma Accademico di I livello in Design e Comunicazione</b
+            >Scuola Italiana Design, Padova · 2010 – 2013
+          </li>
+          <li>
+            <b>Perito Industriale Capotecnico, Elettrotecnica e Automazione</b
+            >ITIS Eugenio Barsanti, Castelfranco Veneto · 2005 – 2010
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contatti" aria-labelledby="contact-title">
+  <div class="wrap">
+    <div class="rule" style="max-width: 240px">
+      <p class="label">Contatti</p>
+    </div>
+    <h2 id="contact-title" style="margin-top: 18px">
+      Hai un prodotto da costruire? Parliamone.
+    </h2>
+    <a class="mail" href="mailto:info@albertofardin.it"
+      >info@albertofardin.it</a
+    >
+    <dl>
+      <div>
+        <dt class="label">Telefono</dt>
+        <dd><a href="tel:+393488638006">+39 348 863 8006</a></dd>
+      </div>
+      <div>
+        <dt class="label">LinkedIn</dt>
+        <dd>
+          <a
+            href="https://www.linkedin.com/in/albertofardin/"
+            target="_blank"
+            rel="noopener"
+            >in/albertofardin</a
+          >
+        </dd>
+      </div>
+      <div>
+        <dt class="label">GitHub</dt>
+        <dd>
+          <a
+            href="https://github.com/albertofardin"
+            target="_blank"
+            rel="noopener"
+            >albertofardin</a
+          >
+        </dd>
+      </div>
+      <div>
+        <dt class="label">Curriculum</dt>
+        <dd>
+          <a
+            href="https://www.albertofardin.it/AlbertoFardin%20CV.pdf"
+            target="_blank"
+            rel="noopener"
+            >CV in PDF</a
+          >
+        </dd>
+      </div>
+    </dl>
+  </div>
+</section>
+<footer>
+  <div class="wrap">
+    <span>© 2026 Alberto Fardin · Piombino Dese (PD)</span><span></span>
+  </div>
+</footer>
+
+<dialog id="lb" aria-label="Immagine ingrandita">
+  <button type="button" id="lb-close">Chiudi</button><img id="lb-img" alt="" />
+</dialog>
+
+<script>
+  const tabs = [...document.querySelectorAll('[role="tab"]')];
+  function select(tab) {
+    tabs.forEach((t) => {
+      const on = t === tab;
+      t.setAttribute("aria-selected", on);
+      t.tabIndex = on ? 0 : -1;
+      document.getElementById(t.getAttribute("aria-controls")).hidden = !on;
+    });
+  }
+  tabs.forEach((t, i) => {
+    t.addEventListener("click", () => select(t));
+    t.addEventListener("keydown", (e) => {
+      const d = { ArrowDown: 1, ArrowRight: 1, ArrowUp: -1, ArrowLeft: -1 }[
+        e.key
+      ];
+      if (!d) return;
+      e.preventDefault();
+      const next = tabs[(i + d + tabs.length) % tabs.length];
+      next.focus();
+      select(next);
+    });
+  });
+  const lb = document.getElementById("lb"),
+    lbImg = document.getElementById("lb-img");
+  document.addEventListener("click", (e) => {
+    const img = e.target.closest("img.zoom");
+    if (img) {
+      lbImg.src = img.src;
+      lbImg.alt = img.alt;
+      lb.showModal();
+    } else if (e.target === lb || e.target.id === "lb-close") lb.close();
+  });
+</script>
