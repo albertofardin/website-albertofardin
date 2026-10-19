@@ -1,5 +1,5 @@
 import base64, re, sys, pathlib
-root = pathlib.Path(sys.argv[1])
+root = pathlib.Path(sys.argv[1]) if len(sys.argv) > 1 else pathlib.Path(__file__).resolve().parent
 html = (root/'template.html').read_text()
 def sub(m):
     return 'data:image/webp;base64,' + base64.b64encode((root/'img'/f'{m[1]}.webp').read_bytes()).decode()
